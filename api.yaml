@@ -1,0 +1,32 @@
+openapi: 3.0.0
+info:
+  title: Trekkking app API
+  description: API documentation for the Trekking Management System.
+  version: 1.0.0
+paths:
+  /login:
+    post:
+      summary: Authenticate user and create session
+      responses:
+        '200':
+          description: Login successful
+        '401':
+          description: Invalid credentials
+  /treks:
+    get:
+      summary: Retrieve a list of all available treks
+      responses:
+        '200':
+          description: A JSON array of treks
+  /bookings:
+    post:
+      summary: Book a new trek for a user
+      responses:
+        '200':
+          description: Trek booked successfully
+  /export-csv:
+    post:
+      summary: Trigger Celery task to export user booking history
+      responses:
+        '200':
+          description: CSV export started

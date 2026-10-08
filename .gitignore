@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+
+venv/
+
+instance/
+*.db
+*.sqlite3
+
+static/exports/*.csv
